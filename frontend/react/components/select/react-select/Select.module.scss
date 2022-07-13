@@ -1,0 +1,29 @@
+.error {
+  color: $color-warning;
+  font-size: $font-size-m3;
+}
+
+.counter {
+  margin-left: 0.6rem;
+  z-index: 1;
+  position: relative;
+}
+
+.menu {
+  // IMPORTANT: This rule was, by some reason, important for the cases when
+  //  there is a custom child. We need to investigate this.
+  //overflow-y: unset !important;
+  .menu-list {
+    overflow-y: unset;
+  }
+}
+
+.control {
+  &.active {
+    border-color: $stride-color-black;
+  }
+}
+.hover {
+  background-color: #f8f7fc;
+  color: $stride-color-black;
+}
