@@ -15,7 +15,7 @@
 
 :white_check_mark: You can add any children components, not as options of select but to be used as some dropdown elements
 
-:white_check_mark: Has [autocomplete](frontend/react/components/select/react-select/AutocompleteSelect.tsx) option with async requests
+:white_check_mark: Has [autocomplete](https://github.com/fasterthanlight-me/ftl-code-library/blob/9d978b9ee825b346744a4f123b157e219e290dbe/frontend/react/components/select/react-select/AutocompleteSelect.tsx) option with async requests
 
 
 
