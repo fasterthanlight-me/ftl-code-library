@@ -26,7 +26,7 @@
 
 :x: Extra hard to make it fluid width based on word width
 
-:x: Not so obvious how to integrate it with form but we have the [approach]('./SelectAdapter.js')
+:x: Not so obvious how to integrate it with form but we have the [approach](https://github.com/fasterthanlight-me/ftl-code-library/blob/c086fdff42cc3afe7de3937b94a197403fa9ce4d/frontend/react/components/select/react-select/SelectAdapter.js)
 
 
 ## Pay Attention
