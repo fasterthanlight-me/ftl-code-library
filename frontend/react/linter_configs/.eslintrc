@@ -1,0 +1,57 @@
+{
+  "extends": ["airbnb"],
+  "plugins": ["@typescript-eslint", "react"],
+
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "react/jsx-handler-names": [
+      "warn",
+      {
+        "eventHandlerPrefix": "warn",
+        "eventHandlerPropPrefix": "warn"
+      }
+    ],
+    "camelcase": "off",
+    "no-unused-expressions": [
+      "error",
+      { "allowShortCircuit": true, "allowTernary": true }
+    ],
+    "@typescript-eslint/indent": ["error", 2],
+    "warnOnUnsupportedTypeScriptVersion": 0,
+
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/interactive-supports-focus": [
+      "error",
+      {
+        "tabbable": ["button", "checkbox", "link"]
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowTypedFunctionExpressions": true
+      }
+    ],
+    "jsx-a11y/no-static-element-interactions": [
+      "error",
+      {
+        "handlers": [
+          "onClick",
+          "onMouseDown",
+          "onMouseUp",
+          "onKeyPress",
+          "onKeyDown",
+          "onKeyUp"
+        ]
+      }
+    ],
+    "react/prop-types": 0
+  },
+  "overrides": [
+    {
+      "files": ["*.gql"],
+      "parser": "@graphql-eslint/eslint-plugin",
+      "plugins": ["@graphql-eslint"]
+    }
+  ]
+}
