@@ -1,8 +1,9 @@
 {
   "extends": ["airbnb"],
+  //  if you use only React, pls remove @typescript-eslint
   "plugins": ["@typescript-eslint", "react"],
-
   "parser": "@typescript-eslint/parser",
+
   "rules": {
     "react/jsx-handler-names": [
       "warn",
@@ -16,20 +17,12 @@
       "error",
       { "allowShortCircuit": true, "allowTernary": true }
     ],
-    "@typescript-eslint/indent": ["error", 2],
     "warnOnUnsupportedTypeScriptVersion": 0,
-
     "jsx-a11y/anchor-is-valid": 0,
     "jsx-a11y/interactive-supports-focus": [
       "error",
       {
         "tabbable": ["button", "checkbox", "link"]
-      }
-    ],
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
-      {
-        "allowTypedFunctionExpressions": true
       }
     ],
     "jsx-a11y/no-static-element-interactions": [
@@ -45,8 +38,19 @@
         ]
       }
     ],
-    "react/prop-types": 0
+    "react/prop-types": 0,
+
+    //only for TS
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowTypedFunctionExpressions": true
+      }
+    ]
   },
+
+  //  only for GraphQL
   "overrides": [
     {
       "files": ["*.gql"],
