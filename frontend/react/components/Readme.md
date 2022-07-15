@@ -50,9 +50,9 @@ Toaster / snackbar — Notify the user with a modeless temporary little popup
 * [React-dates](https://github.com/react-dates/react-dates) - AirBnB datepicker
 
 ## Video / Audio
-[React-youtube](https://github.com/tjallingt/react-youtube) - React.js powered YouTube player component.
-[React-player](https://github.com/CookPete/react-player) - A react component for playing a variety of URLs, including YouTube.
-[React-soundplayer](https://github.com/kosmetism/react-soundplayer) - Create custom SoundCloud players with React.
+* [React-youtube](https://github.com/tjallingt/react-youtube) - React.js powered YouTube player component.
+* [React-player](https://github.com/CookPete/react-player) - A react component for playing a variety of URLs, including YouTube.
+* [React-soundplayer](https://github.com/kosmetism/react-soundplayer) - Create custom SoundCloud players with React.
 
 ## Map
 * [Google-map-react](https://github.com/google-map-react/google-map-react) - Universal google map react component, allows render react components on the google map.
