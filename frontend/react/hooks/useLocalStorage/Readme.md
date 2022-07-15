@@ -1,5 +1,6 @@
-##Example
+## Example
 
+```
 import { useState } from "react";
 // Usage
 function App() {
@@ -16,3 +17,4 @@ function App() {
     </div>
   );
 }
+```
