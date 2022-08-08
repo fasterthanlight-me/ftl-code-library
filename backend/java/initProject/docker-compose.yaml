@@ -1,0 +1,33 @@
+version: '2.1'
+volumes:
+  livecast_backend_data:
+    driver: local
+
+services:
+  postgres:
+    image: postgres:11
+    volumes:
+      - livecast_backend_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: livecast
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
+  user-service:
+    image: nazarmedykh/user-service:v1
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: livecast
+      DB_USER: admin
+      DB_PASS: password
+      AWS_REGION: eu-central-1
+      AWS_ACCESS_KEY: AKIASO5HOBSK2JVBJ7MD
+      AWS_SECRET_KEY: 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
+      AWS_POOL_ID: eu-central-1_5ME75390b
+      UPLOADS_BUCKET: livecast-uploads-tieup-local
+    ports:
+      - 8080:8080

@@ -1,0 +1,44 @@
+server:
+  servlet:
+    context-path: /user-service
+  error:
+    include-message: always
+
+logging:
+  level:
+    org.zalando.logbook: TRACE
+
+logbook:
+  exclude:
+    - /user-service/v1/public/health
+  obfuscate:
+    headers:
+      - Authorization
+  write:
+    chunk-size: 1000
+
+amazonProperties:
+  region: ${AWS_REGION}
+  accessKey: ${AWS_ACCESS_KEY}
+  secretKey: ${AWS_SECRET_KEY}
+  userPoolId: ${AWS_POOL_ID}
+  uploadsBucketName: ${UPLOADS_BUCKET}
+  signatureExpirationSeconds: 3600
+
+spring:
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    hibernate:
+      naming:
+        physical-strategy: com.livecast.common.configuration.PhysicalNamingStrategyImpl
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://cognito-idp.eu-central-1.amazonaws.com/eu-central-1_5ME75390b
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: org.postgresql.Driver
