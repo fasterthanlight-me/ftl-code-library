@@ -1,10 +1,44 @@
+// Current eslint documentation is for version: 8.24.0
+// in case of major updates -> please update this config
 {
-  "extends": ["airbnb"],
-  //  if you use only React, pls remove @typescript-eslint
-  "plugins": ["@typescript-eslint", "react"],
+  // Docs: https://eslint.org/docs/latest/user-guide/configuring/configuration-files#extending-configuration-files
+  "extends": [
+    // Plugin: eslint-config-airbnb 19.0.4
+    // Installation DOCS: https://www.npmjs.com/package/eslint-config-airbnb
+    // tip: don't forget to install peerDependencies
+    // Rules: https://github.com/airbnb/javascript
+    "airbnb",
+    "airbnb/hooks"
+  ],
+
+  // DOCS: https://eslint.org/docs/latest/user-guide/configuring/language-options#specifying-globals
+  "globals": {
+    // these globals here only for example
+    "dataLayer": "readonly",
+    "ga": "readonly"
+  },
+
+  // Docs: https://eslint.org/docs/latest/user-guide/configuring/plugins#configuring-plugins
+  //  if you use only React, pls remove @typescript-eslint here and in parsers
+  "plugins": [
+    "@typescript-eslint", // means @typescript-eslint/eslint-plugin
+    "react" // means esling-plugin-react
+  ],
+
+  // DOCS: https://eslint.org/docs/latest/user-guide/configuring/plugins#specifying-parser
   "parser": "@typescript-eslint/parser",
 
   "rules": {
+    "no-plusplus": 0,
+    "radix": 0,
+    "camelcase": "off",
+    "no-prototype-builtins": 0,
+    "no-unused-expressions": [
+      "error",
+      { "allowShortCircuit": true, "allowTernary": true }
+    ],
+    "warnOnUnsupportedTypeScriptVersion": 0,
+    "react/prop-types": 0,
     "react/jsx-handler-names": [
       "warn",
       {
@@ -12,12 +46,6 @@
         "eventHandlerPropPrefix": "warn"
       }
     ],
-    "camelcase": "off",
-    "no-unused-expressions": [
-      "error",
-      { "allowShortCircuit": true, "allowTernary": true }
-    ],
-    "warnOnUnsupportedTypeScriptVersion": 0,
     "jsx-a11y/anchor-is-valid": 0,
     "jsx-a11y/interactive-supports-focus": [
       "error",
@@ -38,7 +66,6 @@
         ]
       }
     ],
-    "react/prop-types": 0,
 
     //only for TS
     "@typescript-eslint/indent": ["error", 2],
