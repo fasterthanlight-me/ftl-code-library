@@ -17,7 +17,7 @@ nvm use your_node_version
 yarn install
 ```
 
-Set your `.env` parameters(ask `@somebody` to give you the list)
+Set your `.env` variables (ask `@somebody` to give you the list)
 
 ## Development
 
@@ -73,3 +73,6 @@ To deploy latest changes on staging use:
 ```
 yarn deploy:staging
 ```
+
+## Other useful commands or info
+- something
